@@ -3,10 +3,10 @@
 let s = Array(readLine()!)
 
 for i in Character("a").asciiValue!...Character("z").asciiValue! {
-    var c = Character(UnicodeScalar(i))
+    var char = Character(UnicodeScalar(i))
     
-    if s.contains(c) {
-        print("\(s.index(of: c)!)",terminator: " ")
+    if s.containschar {
+        print("\(s.index(of: char)!)",terminator: " ")
     }
     else {
         print("-1", terminator: " ")
