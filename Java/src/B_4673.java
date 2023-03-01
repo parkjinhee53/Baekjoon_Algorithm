@@ -5,12 +5,12 @@ public class B_4673 {
 
 	public static void main(String[] args) {
 
-		boolean[] check = new boolean[10001];
+		boolean[] check = new boolean[10001]; // 10000까지임 
 		
 		for(int i = 1; i < 10001; i++) {
 			int n = d(i);
 			
-			if(n < 10001) {
+			if(n < 10001) { // 10000 보다 작거나 같은 수이기에 10000이 넘으면 안됨 
 				check[n] = true;
 			}
 		}
@@ -18,7 +18,7 @@ public class B_4673 {
 		StringBuilder sb = new StringBuilder();
 		
 		for(int i = 1; i < 10001; i++) {
-			if(!check[i]) {
+			if(!check[i]) { // 생성자가 없는 숫자를 구하기 때문에 false만 출력 
 				sb.append(i).append('\n');
 			}
 		}
@@ -29,8 +29,8 @@ public class B_4673 {
 		int sum = num;
     
 		while(num != 0){
-			sum += num % 10; 
-			num /=10;
+			sum += num % 10; // 첫 째 자리수 
+			num /=10; // 10을 나눠서 첫 째 자리수를 없앰 
 		}
     
 		return sum;
