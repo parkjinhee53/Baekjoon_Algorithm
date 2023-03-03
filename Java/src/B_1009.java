@@ -15,9 +15,9 @@ public class B_1009 {
 	        int n = 1;
 	        
 	        for (int j = 0; j < b; j++){
-	        	n = a * n % 10;
+	        	n = (a * n) % 10; // a에 b제곱 값 구해서 뒷자리만 가져오기 
 	        }
-	        if (n == 0) {
+	        if (n == 0) { // 뒷자리가 0이면 10으로 바꿈 
 	        	n = 10;
 	        }
 	        System.out.println(n);
